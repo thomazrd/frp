@@ -3,8 +3,12 @@ version: '3.3'
 services:
 
   frps:
-    network_mode: "host"
     image: tiggomark/frps:latest
+    ports:
+      - "7000:7000"
+      - "7001:7001"
+      - "7500:7500"
+
 
   nginx_frps:
     image: nginx
